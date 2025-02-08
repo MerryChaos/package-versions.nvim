@@ -17,7 +17,7 @@ function M.fetch_latest_version(package_name, callback)
     stderr:close()
     handle:close()
     if code == 0 then
-      callback((stdout_data:gsub("%s+", "")))
+      callback(stdout_data)
     else
       print("Failed to fetch latest version for " .. package_name)
       print("stderr: " .. stderr_data)

@@ -20,3 +20,29 @@ return {
   end
 }
 ```
+
+## Configuration
+
+You can configure the plugin by calling the `setup` function with a table as an argument.
+```lua
+require('package-versions').setup({ ... })
+```
+
+
+Here is the configuration with the default values:
+
+```lua
+{
+    -- Highlight groups to use
+    highlights = {
+        ok = "Comment", -- Highlight group for up-to-date packages
+        warning = "WarningMsg", -- Highlight group for outdated packages
+        error = "ErrorMsg", -- Highlight group for packages with errors
+    },
+
+    -- When to update the package version info
+    autocmds = {
+        "BufReadPost",
+        "BufWritePost",
+    },
+}
