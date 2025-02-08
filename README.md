@@ -13,7 +13,7 @@ Maybe I will add more features in the future, but for now, this is enough for me
 
 - Using [lazy.vim](https://github.com/folke/lazy.nvim)
 ```lua
-use {
+return {
   'MerryChaos/package-versions.nvim',
   config = function()
     require('package-versions').setup()
